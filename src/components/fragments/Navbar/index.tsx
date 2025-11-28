@@ -53,7 +53,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden text-sm text-gray-800 uppercase gap-8 lg:flex items-center font-semibold">
+          <ul className="hidden text-sm text-gray-800 gap-8 lg:flex items-center font-semibold">
             {/* Persib */}
             <li className="relative">
               <button
@@ -286,7 +286,7 @@ const Navbar = () => {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       style={{ overflow: "hidden" }}
-                      className="flex flex-col gap-1 text-xs font-medium text-black pl-4 pb-2"
+                      className="flex flex-col gap-1 font-medium text-black pl-4 pb-2"
                     >
                       <Link
                         href="/Persib/berita-persib"
@@ -346,7 +346,7 @@ const Navbar = () => {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       style={{ overflow: "hidden" }}
-                      className="flex flex-col gap-1 text-xs font-medium text-black pl-4 pb-2"
+                      className="flex flex-col gap-1 font-medium text-black pl-4 pb-2"
                     >
                       <Link
                         href="/Nasional/bola-nasional"
@@ -399,7 +399,7 @@ const Navbar = () => {
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       style={{ overflow: "hidden" }}
-                      className="flex flex-col gap-1 text-xs font-medium text-black pl-4 pb-2"
+                      className="flex flex-col gap-1 font-medium text-black pl-4 pb-2"
                     >
                       <Link
                         href="/Hiburan/arena-bobotoh"

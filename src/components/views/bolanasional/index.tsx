@@ -6,7 +6,7 @@ const news = [
     id: 1,
     href: "/beritapersib",
     title:
-      "Usai Tampil Apik di Piala Dunia U-17, Nazriel Semakin Termotivasi Berkat Ppujian Thom Haye",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
     category: "Bola Nasional",
     date: "24 November 2025",
     time: "19:33 WIB",
@@ -15,8 +15,17 @@ const news = [
   {
     id: 2,
     href: "/beritapersib",
+    title: "Lorem ipsum dolor sit amet.",
+    category: "Bola Nasional",
+    date: "24 November 2025",
+    time: "19:33 WIB",
+    image: "/persib/321083001.webp",
+  },
+  {
+    id: 3,
+    href: "/beritapersib",
     title:
-      "Usai Tampil Apik di Piala Dunia U-17, Nazriel Semakin Termotivasi Berkat Ppujian Thom Haye",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
     category: "Bola Nasional",
     date: "24 November 2025",
     time: "19:33 WIB",
@@ -29,37 +38,46 @@ const trending = [
     id: 1,
     href: "/beritapersib",
     title:
-      "Usai Tampil Apik di Piala Dunia U-17, Nazriel Semakin Termotivasi Berkat Pujian Thom Haye",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 2,
     href: "/beritapersib",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat.",
+    title: "Lorem ipsum dolor sit amet.",
   },
   {
     id: 3,
     href: "/beritapersib",
     title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
   },
   {
     id: 4,
     href: "/beritapersib",
     title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 5,
     href: "/beritapersib",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat.",
+    title: "Lorem ipsum dolor sit amet.",
   },
   {
     id: 6,
     href: "/beritapersib",
     title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
+  },
+  {
+    id: 7,
+    href: "/beritapersib",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
+  },
+  {
+    id: 8,
+    href: "/beritapersib",
+    title: "Lorem ipsum dolor sit amet.",
   },
 ];
 
@@ -69,7 +87,7 @@ const BolaNasionalView = () => {
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
-          <h1 className="text-2xl font-mono underline uppercase mb-5">
+          <h1 className="text-lg lg:text-2xl underline uppercase mb-5">
             Berita Terkini
           </h1>
 
@@ -90,7 +108,7 @@ const BolaNasionalView = () => {
 
         {/* Trending */}
         <div className="w-full md:w-1/3 mt-5 md:mt-0">
-          <h1 className="text-2xl font-mono underline uppercase mb-5">
+          <h1 className="text-lg lg:text-2xl underline uppercase mb-5">
             Trending
           </h1>
 
