@@ -241,190 +241,188 @@ const Navbar = () => {
             />
           </div>
         </div>
-
-        {/* MOBILE MENU DENGAN STRUKTUR AKORDEON (SAMA DENGAN DESKTOP) */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="w-full h-auto absolute top-20 rounded-xl shadow-lg bg-gray-400 px-6 py-4 lg:hidden"
-            >
-              <ul className="flex flex-col text-sm font-bold text-slate-50 gap-1">
-                {/* --- Kategori PERSIP --- */}
-                <li className="border-b border-gray-200">
-                  <button
-                    onClick={() => toggleDropdown("persib")}
-                    className="w-full flex justify-between items-center py-3 hover:text-blue-400 transition-colors"
-                  >
-                    Persib
-                    <svg
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        openDropdown === "persib" ? "transform rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </button>
-                  <AnimatePresence>
-                    {openDropdown === "persib" && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        style={{ overflow: "hidden" }}
-                        className="flex flex-col gap-1 text-xs font-medium text-slate-200 pl-4 pb-2"
-                      >
-                        <Link
-                          href="/Persib/berita-persib"
-                          className="block py-1 hover:text-blue-400"
-                          onClick={() => setOpen(false)}
-                        >
-                          Berita Persib
-                        </Link>
-                        <Link
-                          href="/Persib/pemain-persib"
-                          className="block py-1 hover:text-blue-400"
-                          onClick={() => setOpen(false)}
-                        >
-                          Profil Pemain
-                        </Link>
-                        <Link
-                          href="/Persib/jadwal-persib"
-                          className="block py-1 hover:text-blue-400"
-                          onClick={() => setOpen(false)}
-                        >
-                          Jadwal & Hasil
-                        </Link>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </li>
-
-                {/* --- Kategori SEPAK BOLA --- */}
-                <li className="border-b border-gray-200">
-                  <button
-                    onClick={() => toggleDropdown("nasional")}
-                    className="w-full flex justify-between items-center py-3 hover:text-blue-400 transition-colors"
-                  >
-                    Sepak Bola
-                    <svg
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        openDropdown === "nasional"
-                          ? "transform rotate-180"
-                          : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </button>
-                  <AnimatePresence>
-                    {openDropdown === "nasional" && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        style={{ overflow: "hidden" }}
-                        className="flex flex-col gap-1 text-xs font-medium text-slate-200 pl-4 pb-2"
-                      >
-                        <Link
-                          href="/Nasional/bola-nasional"
-                          className="block py-1 hover:text-blue-400"
-                          onClick={() => setOpen(false)}
-                        >
-                          Bola Nasional
-                        </Link>
-                        <Link
-                          href="/Nasional/sports-jabar"
-                          className="block py-1 hover:text-blue-400"
-                          onClick={() => setOpen(false)}
-                        >
-                          Sports Jabar
-                        </Link>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </li>
-
-                {/* --- Kategori HIBURAN --- */}
-                <li className="border-b border-gray-200">
-                  <button
-                    onClick={() => toggleDropdown("hiburan")}
-                    className="w-full flex justify-between items-center py-3 hover:text-blue-400 transition-colors"
-                  >
-                    Hiburan
-                    <svg
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        openDropdown === "hiburan" ? "transform rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </button>
-                  <AnimatePresence>
-                    {openDropdown === "hiburan" && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        style={{ overflow: "hidden" }}
-                        className="flex flex-col gap-1 text-xs font-medium text-slate-200 pl-4 pb-2"
-                      >
-                        <Link
-                          href="/Hiburan/arena-bobotoh"
-                          className="block py-1 hover:text-blue-400"
-                          onClick={() => setOpen(false)}
-                        >
-                          Arena Bobotoh
-                        </Link>
-                        <Link
-                          href="/Hiburan/esport"
-                          className="block py-1 hover:text-blue-400"
-                          onClick={() => setOpen(false)}
-                        >
-                          E-Sport & Game
-                        </Link>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </li>
-              </ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
+
+      {/* MOBILE MENU DENGAN STRUKTUR AKORDEON (SAMA DENGAN DESKTOP) */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="w-full min-h-screen absolute top-24 overflow-y-auto rounded-xl shadow-lg bg-white/30 backdrop-blur-lg px-6 py-4 lg:hidden"
+          >
+            <ul className="flex flex-col text-sm font-bold text-black gap-1">
+              {/* --- Kategori PERSIP --- */}
+              <li className="border-b border-gray-200">
+                <button
+                  onClick={() => toggleDropdown("persib")}
+                  className="w-full flex justify-between items-center py-3 hover:text-blue-400 transition-colors"
+                >
+                  Persib
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      openDropdown === "persib" ? "transform rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {openDropdown === "persib" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      style={{ overflow: "hidden" }}
+                      className="flex flex-col gap-1 text-xs font-medium text-black pl-4 pb-2"
+                    >
+                      <Link
+                        href="/Persib/berita-persib"
+                        className="block py-1 hover:text-blue-400"
+                        onClick={() => setOpen(false)}
+                      >
+                        Berita Persib
+                      </Link>
+                      <Link
+                        href="/Persib/pemain-persib"
+                        className="block py-1 hover:text-blue-400"
+                        onClick={() => setOpen(false)}
+                      >
+                        Profil Pemain
+                      </Link>
+                      <Link
+                        href="/Persib/jadwal-persib"
+                        className="block py-1 hover:text-blue-400"
+                        onClick={() => setOpen(false)}
+                      >
+                        Jadwal & Hasil
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </li>
+
+              {/* --- Kategori SEPAK BOLA --- */}
+              <li className="border-b border-gray-200">
+                <button
+                  onClick={() => toggleDropdown("nasional")}
+                  className="w-full flex justify-between items-center py-3 hover:text-blue-400 transition-colors"
+                >
+                  Sepak Bola
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      openDropdown === "nasional" ? "transform rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {openDropdown === "nasional" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      style={{ overflow: "hidden" }}
+                      className="flex flex-col gap-1 text-xs font-medium text-black pl-4 pb-2"
+                    >
+                      <Link
+                        href="/Nasional/bola-nasional"
+                        className="block py-1 hover:text-blue-400"
+                        onClick={() => setOpen(false)}
+                      >
+                        Bola Nasional
+                      </Link>
+                      <Link
+                        href="/Nasional/sports-jabar"
+                        className="block py-1 hover:text-blue-400"
+                        onClick={() => setOpen(false)}
+                      >
+                        Sports Jabar
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </li>
+
+              {/* --- Kategori HIBURAN --- */}
+              <li className="border-b border-gray-200">
+                <button
+                  onClick={() => toggleDropdown("hiburan")}
+                  className="w-full flex justify-between items-center py-3 hover:text-blue-400 transition-colors"
+                >
+                  Hiburan
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      openDropdown === "hiburan" ? "transform rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {openDropdown === "hiburan" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      style={{ overflow: "hidden" }}
+                      className="flex flex-col gap-1 text-xs font-medium text-black pl-4 pb-2"
+                    >
+                      <Link
+                        href="/Hiburan/arena-bobotoh"
+                        className="block py-1 hover:text-blue-400"
+                        onClick={() => setOpen(false)}
+                      >
+                        Arena Bobotoh
+                      </Link>
+                      <Link
+                        href="/Hiburan/esport"
+                        className="block py-1 hover:text-blue-400"
+                        onClick={() => setOpen(false)}
+                      >
+                        E-Sport & Game
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
