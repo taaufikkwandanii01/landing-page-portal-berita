@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div
-      className={`${lato.className} min-h-screen flex flex-col bg-radial-[at_50%_75%] from-sky-200 via-sky-400 to-slate-300 to-90%`}
+      className={`${lato.className} min-h-screen flex flex-col bg-slate-200`}
     >
       {!disableNavbar.includes(pathname.split("/")[1]) && <Navbar />}
       <Component {...pageProps} />
