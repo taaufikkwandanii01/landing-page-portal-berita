@@ -64,12 +64,11 @@ type PropsTypeNewsTrending = {
 const CardNewsTrending = (Props: PropsTypeNewsTrending) => {
   const { href, nomor, title } = Props;
   return (
-    // Bungkus Link di sekitar div utama dan tambahkan group hover
     <Link
       href={href}
-      className="block group w-full transition-all duration-300"
+      className="block group w-full hover:bg-gray-100 transition-all duration-300"
     >
-      <div className="w-full flex flex-row items-center gap-4 py-3 border-b border-gray-100 hover:bg-gray-50 px-2 rounded-md">
+      <div className="w-full flex flex-row items-center gap-4 py-2 px-2 border-b border-gray-100">
         {/* Penomoran Besar (W-1/5) */}
         <div className="">
           <h3 className="text-3xl md:text-4xl font-extrabold font-serif text-slate-300 group-hover:text-blue-600 transition-colors duration-200">

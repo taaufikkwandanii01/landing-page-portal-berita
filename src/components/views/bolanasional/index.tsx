@@ -112,7 +112,7 @@ const BolaNasionalView = () => {
             Trending
           </h1>
 
-          <div className="grid grid-cols-1 gap-2">
+          <div className="grid grid-cols-1 gap-2 md:border-x-3 border-gray-400">
             {trending.map((item, index) => (
               <CardNewsTrending
                 key={item.id}
