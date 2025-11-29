@@ -124,7 +124,7 @@ const PersibView = () => {
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
-          <h1 className="text-lg lg:text-2xl underline uppercase mb-5">
+          <h1 className="text-lg lg:text-2xl font-bold font-serif tracking-tighter underline uppercase mb-5">
             Berita Terkini
           </h1>
 
@@ -144,12 +144,12 @@ const PersibView = () => {
         </div>
 
         {/* Trending */}
-        <div className="w-full md:w-1/3 mt-5 md:mt-0">
-          <h1 className="text-lg lg:text-2xl underline uppercase mb-5">
+        <div className="w-full md:w-1/3 mt-5 md:mt-0 md:pt-15">
+          <h1 className="text-lg lg:text-2xl font-semibold font-serif underline uppercase mb-5">
             Trending
           </h1>
 
-          <div className="grid grid-cols-1 gap-2 md:border-x-3 border-gray-400">
+          <div className="grid grid-cols-1 gap-0 md:border-x border-gray-200">
             {trending.map((item, index) => (
               <CardNewsTrending
                 key={item.id}

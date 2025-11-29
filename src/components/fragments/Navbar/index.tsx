@@ -251,7 +251,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="w-auto h-auto absolute top-24 inset-x-4 overflow-y-auto rounded-xl shadow-lg bg-slate-400/30 backdrop-blur-lg px-6 py-4 lg:hidden"
+            className="w-auto h-auto absolute top-24 inset-x-4 overflow-y-auto rounded-xl shadow-lg bg-[#2D5C88]/30 backdrop-blur-lg px-6 py-4 lg:hidden"
           >
             <ul className="flex flex-col text-sm font-bold text-black gap-1">
               {/* --- Kategori PERSIP --- */}

@@ -10,14 +10,14 @@ const NewsLayout = ({ children, category }: PropsType) => {
         <div className="flex items-center justify-center h-40">
           {category?.map((item, index) => (
             <h1
-              className="text-sm lg:text-2xl font-bold uppercase text-white bg-blue-400 py-3 px-3"
+              className="text-sm lg:text-2xl font-bold uppercase text-white bg-[#2D5C88] py-3 px-3"
               key={index}
             >
               {item}
             </h1>
           ))}
         </div>
-        <div className="min-h-screen">{children}</div>
+        <div className="min-h-screen pb-10">{children}</div>
       </div>
     </main>
   );
