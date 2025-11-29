@@ -1,10 +1,10 @@
-import NewsLayout from "@/components/layouts/NewsLayout";
+import MainLayout from "@/components/layouts/MainLayout";
 import { CardNews, CardNewsTrending } from "@/components/ui/Card/CardNews";
 
 const news = [
   {
     id: 1,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
     category: "Berita Persib",
@@ -14,7 +14,7 @@ const news = [
   },
   {
     id: 2,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
     category: "Berita Persib",
     date: "24 November 2025",
@@ -23,7 +23,7 @@ const news = [
   },
   {
     id: 3,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
     category: "Berita Persib",
@@ -33,7 +33,7 @@ const news = [
   },
   {
     id: 4,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
     category: "Berita Persib",
@@ -43,7 +43,7 @@ const news = [
   },
   {
     id: 5,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
     category: "Berita Persib",
     date: "24 November 2025",
@@ -52,7 +52,7 @@ const news = [
   },
   {
     id: 6,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
     category: "Berita Persib",
@@ -62,7 +62,7 @@ const news = [
   },
   {
     id: 7,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
     category: "Berita Persib",
@@ -72,7 +72,7 @@ const news = [
   },
   {
     id: 8,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
     category: "Berita Persib",
     date: "24 November 2025",
@@ -84,35 +84,35 @@ const news = [
 const trending = [
   {
     id: 1,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 2,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
   {
     id: 3,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
   },
   {
     id: 4,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 5,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
   {
     id: 6,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
   },
@@ -120,7 +120,7 @@ const trending = [
 
 const PersibView = () => {
   return (
-    <NewsLayout category={["Berita Persib"]}>
+    <MainLayout category={["Berita Persib"]}>
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
@@ -161,7 +161,7 @@ const PersibView = () => {
           </div>
         </div>
       </div>
-    </NewsLayout>
+    </MainLayout>
   );
 };
 

@@ -1,10 +1,10 @@
-import NewsLayout from "@/components/layouts/NewsLayout";
+import MainLayout from "@/components/layouts/MainLayout";
 import { CardNews, CardNewsTrending } from "@/components/ui/Card/CardNews";
 
 const news = [
   {
     id: 1,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
     category: "Bola Nasional",
@@ -14,7 +14,7 @@ const news = [
   },
   {
     id: 2,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
     category: "Bola Nasional",
     date: "24 November 2025",
@@ -23,7 +23,7 @@ const news = [
   },
   {
     id: 3,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
     category: "Bola Nasional",
@@ -36,54 +36,54 @@ const news = [
 const trending = [
   {
     id: 1,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 2,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
   {
     id: 3,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
   },
   {
     id: 4,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 5,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
   {
     id: 6,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
   },
   {
     id: 7,
-    href: "/beritapersib",
+    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 8,
-    href: "/beritapersib",
+    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
 ];
 
 const BolaNasionalView = () => {
   return (
-    <NewsLayout category={["Bola Nasional"]}>
+    <MainLayout category={["Bola Nasional"]}>
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
@@ -124,7 +124,7 @@ const BolaNasionalView = () => {
           </div>
         </div>
       </div>
-    </NewsLayout>
+    </MainLayout>
   );
 };
 

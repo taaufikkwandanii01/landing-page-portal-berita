@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import NewsLayout from "@/components/layouts/NewsLayout";
+import MainLayout from "@/components/layouts/MainLayout";
 
 export default function Home() {
   return (
@@ -11,11 +10,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NewsLayout category={["Simamaung"]}>
+      <MainLayout category={["Simamaung"]}>
         <div className="w-full flex items-center justify-center pt-35">
           <h1 className="text-2xl font-bold uppercase">Hallo</h1>
         </div>
-      </NewsLayout>
+      </MainLayout>
     </>
   );
 }

@@ -1,13 +1,13 @@
-import NewsLayout from "@/components/layouts/NewsLayout";
+import MainLayout from "@/components/layouts/MainLayout";
 
 const ProfilePemainPage = () => {
   return (
     <>
-      <NewsLayout category={["Tim Persib"]}>
+      <MainLayout category={["Tim Persib"]}>
         <div className="w-full flex items-center justify-center py-35">
           <h1 className="text-2xl font-bold uppercase">Tim Persib</h1>
         </div>
-      </NewsLayout>
+      </MainLayout>
     </>
   );
 };

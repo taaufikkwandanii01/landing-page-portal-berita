@@ -1,12 +1,12 @@
-import NewsLayout from "@/components/layouts/NewsLayout";
+import MainLayout from "@/components/layouts/MainLayout";
 
 const JadwalPersibPage = () => {
   return (
-    <NewsLayout category={["Jadwal Persib"]}>
+    <MainLayout category={["Jadwal Persib"]}>
       <div className="w-full flex items-center justify-center py-35">
         <h1>Jadwal Persib</h1>
       </div>
-    </NewsLayout>
+    </MainLayout>
   );
 };
 export default JadwalPersibPage;
