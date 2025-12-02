@@ -1,9 +1,9 @@
-import ProfilePemainView from "@/components/views/Persib/pemain-persib";
+import TimPersibView from "@/components/views/Persib/tim-persib";
 
 const ProfilePemainPage = () => {
   return (
     <>
-      <ProfilePemainView />
+      <TimPersibView />
     </>
   );
 };

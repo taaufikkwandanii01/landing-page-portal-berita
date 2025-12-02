@@ -4,7 +4,7 @@ import CardPlayers from "@/components/ui/Card/CardPlayers";
 
 // --- START: DATA PEMAIN LENGKAP ---
 
-const rawDaftarPemain = [
+const rawDataTimPersib = [
   // Kiper
   {
     id: 1,
@@ -15,7 +15,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/teja.jpg",
   },
   {
-    id: 9,
+    id: 2,
     nama: "Fitrul Dwi Rustapa",
     posisi: "Kiper",
     no: 52,
@@ -33,7 +33,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/nick.jpg",
   },
   {
-    id: 8,
+    id: 4,
     nama: "Rezaldi Hehanussa",
     posisi: "Bek Sayap Kiri",
     no: 56,
@@ -41,7 +41,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/rezaldi.jpg",
   },
   {
-    id: 10,
+    id: 5,
     nama: "Achmad Jufriyanto",
     posisi: "Bek Tengah",
     no: 16,
@@ -49,7 +49,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/jufriyanto.jpg",
   },
   {
-    id: 11,
+    id: 6,
     nama: "I Putu Gede Juni Antara",
     posisi: "Bek Sayap Kanan",
     no: 4,
@@ -59,7 +59,7 @@ const rawDaftarPemain = [
 
   // Gelandang
   {
-    id: 2,
+    id: 7,
     nama: "Dedi Kusnandar",
     posisi: "Gelandang Bertahan",
     no: 11,
@@ -67,7 +67,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/dedi.jpg",
   },
   {
-    id: 7,
+    id: 8,
     nama: "Rachmat Irianto",
     posisi: "Gelandang Tengah",
     no: 5,
@@ -75,7 +75,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/rianto.jpg",
   },
   {
-    id: 12,
+    id: 9,
     nama: "Marc Klok",
     posisi: "Gelandang Serang",
     no: 23,
@@ -83,7 +83,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/klok.jpg",
   },
   {
-    id: 13,
+    id: 10,
     nama: "Tyronne del Pino",
     posisi: "Gelandang Serang",
     no: 99,
@@ -93,7 +93,7 @@ const rawDaftarPemain = [
 
   // Penyerang
   {
-    id: 14,
+    id: 11,
     nama: "Ezra Walian",
     posisi: "Penyerang Bayangan",
     no: 30,
@@ -101,7 +101,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/ezra.jpg",
   },
   {
-    id: 5,
+    id: 12,
     nama: "David da Silva",
     posisi: "Striker",
     no: 19,
@@ -109,7 +109,7 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/dds.jpg",
   },
   {
-    id: 4,
+    id: 13,
     nama: "Ciro Alves",
     posisi: "Winger",
     no: 77,
@@ -117,51 +117,64 @@ const rawDaftarPemain = [
     imageUrl: "/images/pemain/ciro.jpg",
   },
   {
-    id: 15,
+    id: 14,
     nama: "Febri Hariyadi",
     posisi: "Winger",
     no: 7,
     category: "Penyerang",
-    imageUrl: "/images/pemain/febri.jpg",
+    imageUrl: "/vercel.svg",
+  },
+  {
+    id: 14,
+    nama: "Bojan Hodak",
+    posisi: "Pelatih Kepala",
+    category: "Pelatih",
+    imageUrl: "/vercel.svg",
+  },
+  {
+    id: 15,
+    nama: "Igor",
+    posisi: "Asisten Pelatih",
+    category: "Pelatih",
+    imageUrl: "/vercel.svg",
   },
 ];
 
 // --- END: DATA PEMAIN LENGKAP ---
 
-const ProfilePemainView = () => {
-  // Daftar kategori yang ingin ditampilkan berurutan
-  const categories = ["Kiper", "Bek", "Gelandang", "Penyerang"];
+const TimPersibView = () => {
+  const category = ["Kiper", "Bek", "Gelandang", "Penyerang", "Pelatih"];
 
   return (
     <>
       <MainLayout category={["Tim Persib"]}>
         <div className="w-full min-h-screen py-10 px-4 md:px-10">
           {/* Iterasi Kategori Secara Manual (Menggantikan groupedPemain) */}
-          {categories.map((posisi) => {
+          {category.map((posisi) => {
             // 1. Filter pemain untuk kategori saat ini
-            const pemainList = rawDaftarPemain.filter(
-              (pemain) => pemain.category === posisi
+            const timList = rawDataTimPersib.filter(
+              (tim) => tim.category === posisi
             );
 
             // 2. Render jika ada pemain di kategori tersebut
             return (
-              pemainList.length > 0 && (
+              timList.length > 0 && (
                 <section key={posisi} className="mb-12">
                   {/* Judul Bagian (Posisi) */}
                   <h2 className="text-2xl font-bold mb-6 border-l-4 border-blue-500 pl-3">
-                    {posisi} ({pemainList.length})
+                    {posisi} ({timList.length})
                   </h2>
 
                   {/* Container dengan Responsive Grid */}
                   <div className="flex overflow-x-auto lg:overflow-x-visible lg:grid lg:grid-cols-4 gap-6 md:gap-8 pb-4">
-                    {pemainList.map((pemain) => (
+                    {timList.map((tim) => (
                       <div
-                        key={pemain.id}
+                        key={tim.id}
                         // Kelas untuk mengatur lebar item di mode scroll (layar kecil)
                         className="flex-shrink-0 w-60 sm:w-1/3 md:w-1/4 lg:w-auto"
                       >
                         {/* Mengirimkan SELURUH OBJEK 'pemain' ke CardPlayers */}
-                        <CardPlayers pemain={pemain} />
+                        <CardPlayers dataTimPersib={tim} />
                       </div>
                     ))}
                   </div>
@@ -171,9 +184,9 @@ const ProfilePemainView = () => {
           })}
 
           {/* Tampilan jika tidak ada pemain sama sekali */}
-          {rawDaftarPemain.length === 0 && (
+          {rawDataTimPersib.length === 0 && (
             <div className="text-center mt-20 text-gray-500 dark:text-gray-400">
-              <p className="text-xl">Tidak ada data pemain yang tersedia.</p>
+              <p className="text-xl">Tidak ada data tim yang tersedia.</p>
             </div>
           )}
         </div>
@@ -182,4 +195,4 @@ const ProfilePemainView = () => {
   );
 };
 
-export default ProfilePemainView;
+export default TimPersibView;

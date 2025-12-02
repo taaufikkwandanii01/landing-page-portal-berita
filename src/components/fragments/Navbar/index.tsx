@@ -98,10 +98,10 @@ const Navbar = () => {
                       Berita Persib
                     </Link>
                     <Link
-                      href="/Persib/pemain-persib"
+                      href="/Persib/tim-persib"
                       className="py-1 px-2 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150"
                     >
-                      Profil Pemain
+                      Tim Persib
                     </Link>
                     <Link
                       href="/Persib/jadwal-persib"
@@ -296,11 +296,11 @@ const Navbar = () => {
                         Berita Persib
                       </Link>
                       <Link
-                        href="/Persib/pemain-persib"
+                        href="/Persib/tim-persib"
                         className="block py-1 hover:text-blue-400"
                         onClick={() => setOpen(false)}
                       >
-                        Profil Pemain
+                        Tim Persib
                       </Link>
                       <Link
                         href="/Persib/jadwal-persib"

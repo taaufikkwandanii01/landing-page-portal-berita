@@ -87,7 +87,7 @@ const BolaNasionalView = () => {
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
-          <h1 className="text-lg lg:text-2xl font-bold font-serif tracking-tighter underline uppercase mb-5">
+          <h1 className="text-lg lg:text-2xl font-bold font-serif tracking-tighter uppercase border-l-4 border-blue-500 pl-2 mb-5">
             Berita Terkini
           </h1>
 
@@ -104,11 +104,18 @@ const BolaNasionalView = () => {
               />
             ))}
           </div>
+
+          {/* Tampilan jika tidak ada pemain sama sekali */}
+          {news.length === 0 && (
+            <div className="text-center text-gray-500 mt-20">
+              <p className="text-xl">Tidak ada berita yang tersedia.</p>
+            </div>
+          )}
         </div>
 
         {/* Trending */}
         <div className="w-full md:w-1/3 mt-5 md:mt-0 md:pt-15">
-          <h1 className="text-lg lg:text-2xl font-semibold font-serif underline uppercase mb-5">
+          <h1 className="text-lg lg:text-2xl font-semibold font-serif uppercase border-l-4 border-blue-500 pl-2 mb-5">
             Trending
           </h1>
 
