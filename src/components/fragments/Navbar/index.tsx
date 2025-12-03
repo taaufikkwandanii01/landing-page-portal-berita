@@ -212,7 +212,7 @@ const Navbar = () => {
                       Arena Bobotoh
                     </Link>
                     <Link
-                      href="/Hiburan/esport"
+                      href="/Hiburan/esports"
                       className="py-1 px-2 rounded-md hover:bg-blue-50 hover:text-blue-600 transition-colors duration-150"
                     >
                       E-Sport & Game
@@ -409,7 +409,7 @@ const Navbar = () => {
                         Arena Bobotoh
                       </Link>
                       <Link
-                        href="/Hiburan/esport"
+                        href="/Hiburan/esports"
                         className="block py-1 hover:text-blue-400"
                         onClick={() => setOpen(false)}
                       >

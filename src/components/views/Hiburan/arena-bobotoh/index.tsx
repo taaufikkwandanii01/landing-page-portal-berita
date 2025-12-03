@@ -7,7 +7,7 @@ const news = [
     href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
-    category: "Berita Persib",
+    category: "Arena Bobotoh",
     date: "24 November 2025",
     time: "19:33 WIB",
     image: "/",
@@ -16,65 +16,7 @@ const news = [
     id: 2,
     href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
-    category: "Berita Persib",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/",
-  },
-  {
-    id: 3,
-    href: "/Artikel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
-    category: "Berita Persib",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/",
-  },
-  {
-    id: 4,
-    href: "/Artikel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
-    category: "Berita Persib",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/",
-  },
-  {
-    id: 5,
-    href: "/Artikel",
-    title: "Lorem ipsum dolor sit amet.",
-    category: "Berita Persib",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/",
-  },
-  {
-    id: 6,
-    href: "/Artikel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
-    category: "Berita Persib",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/",
-  },
-  {
-    id: 7,
-    href: "/Artikel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
-    category: "Berita Persib",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/",
-  },
-  {
-    id: 8,
-    href: "/Artikel",
-    title: "Lorem ipsum dolor sit amet.",
-    category: "Berita Persib",
+    category: "Arena Bobotoh",
     date: "24 November 2025",
     time: "19:33 WIB",
     image: "/",
@@ -112,9 +54,9 @@ const trending = [
   },
 ];
 
-const PersibView = () => {
+const ArenaBobotohView = () => {
   return (
-    <MainLayout category={["Berita Persib"]}>
+    <MainLayout category={["Arena Bobotoh"]}>
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
@@ -166,4 +108,4 @@ const PersibView = () => {
   );
 };
 
-export default PersibView;
+export default ArenaBobotohView;

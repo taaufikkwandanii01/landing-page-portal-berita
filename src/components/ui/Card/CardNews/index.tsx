@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 // --- CardNews: Kartu Berita Utama (Image + Text Side-by-Side) ---
 
@@ -14,6 +15,7 @@ type PropsTypeNews = {
 
 const CardNews = (Props: PropsTypeNews) => {
   const { href, title, category, date, time, image } = Props;
+  const [imgSrc, setImgSrc] = useState(image);
   return (
     <Link
       href={href}
@@ -23,13 +25,14 @@ const CardNews = (Props: PropsTypeNews) => {
         {/* Kontainer Gambar Kecil (20% Lebar) */}
         <div className="w-1/5 flex-shrink-0 relative aspect-square overflow-hidden rounded-md">
           <Image
-            src={image}
+            src={imgSrc}
             alt={title}
             fill
             // Perbaikan di sini: Mendefinisikan ukuran yang lebih spesifik berdasarkan tampilan.
             // Contoh: di layar kecil 100vw, di desktop (lg) 100px.
             sizes="(max-width: 640px) 20vw, (max-width: 1024px) 15vw, 100px"
             className="object-cover"
+            onError={() => setImgSrc("/images/news/default.png")}
           />
         </div>
 

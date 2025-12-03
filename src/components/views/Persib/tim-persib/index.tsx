@@ -1,149 +1,162 @@
 import MainLayout from "@/components/layouts/MainLayout";
-// Import CardPlayers yang sudah diperbaiki
 import CardPlayers from "@/components/ui/Card/CardPlayers";
-
-// --- START: DATA PEMAIN LENGKAP ---
 
 const rawDataTimPersib = [
   // Kiper
   {
     id: 1,
-    nama: "Teja Paku Alam",
+    nama: "Fullname",
     posisi: "Kiper",
     no: 1,
     category: "Kiper",
-    imageUrl: "/images/pemain/teja.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 2,
-    nama: "Fitrul Dwi Rustapa",
+    nama: "Fullname",
     posisi: "Kiper",
     no: 52,
     category: "Kiper",
-    imageUrl: "/images/pemain/fitrul.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
 
   // Bek
   {
     id: 3,
-    nama: "Nick Kuipers",
+    nama: "Fullname",
     posisi: "Bek Tengah",
     no: 2,
     category: "Bek",
-    imageUrl: "/images/pemain/nick.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 4,
-    nama: "Rezaldi Hehanussa",
-    posisi: "Bek Sayap Kiri",
+    nama: "Fullname",
+    posisi: "Bek Tengah",
     no: 56,
     category: "Bek",
-    imageUrl: "/images/pemain/rezaldi.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 5,
-    nama: "Achmad Jufriyanto",
-    posisi: "Bek Tengah",
+    nama: "Fullname",
+    posisi: "Bek Sayap Kiri",
     no: 16,
     category: "Bek",
-    imageUrl: "/images/pemain/jufriyanto.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 6,
-    nama: "I Putu Gede Juni Antara",
+    nama: "Fullname",
     posisi: "Bek Sayap Kanan",
     no: 4,
     category: "Bek",
-    imageUrl: "/images/pemain/putugede.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
 
   // Gelandang
   {
     id: 7,
-    nama: "Dedi Kusnandar",
+    nama: "Fullname",
     posisi: "Gelandang Bertahan",
     no: 11,
     category: "Gelandang",
-    imageUrl: "/images/pemain/dedi.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 8,
-    nama: "Rachmat Irianto",
+    nama: "Fullname",
     posisi: "Gelandang Tengah",
     no: 5,
     category: "Gelandang",
-    imageUrl: "/images/pemain/rianto.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 9,
-    nama: "Marc Klok",
+    nama: "Fullname",
     posisi: "Gelandang Serang",
     no: 23,
     category: "Gelandang",
-    imageUrl: "/images/pemain/klok.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 10,
-    nama: "Tyronne del Pino",
+    nama: "Fullname",
     posisi: "Gelandang Serang",
     no: 99,
     category: "Gelandang",
-    imageUrl: "/images/pemain/tyronne.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
 
   // Penyerang
   {
     id: 11,
-    nama: "Ezra Walian",
-    posisi: "Penyerang Bayangan",
+    nama: "Fullname",
+    posisi: "Striker",
     no: 30,
     category: "Penyerang",
-    imageUrl: "/images/pemain/ezra.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 12,
-    nama: "David da Silva",
+    nama: "Fullname",
     posisi: "Striker",
     no: 19,
     category: "Penyerang",
-    imageUrl: "/images/pemain/dds.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 13,
-    nama: "Ciro Alves",
-    posisi: "Winger",
+    nama: "Fullname",
+    posisi: "Penyerang Kiri",
     no: 77,
     category: "Penyerang",
-    imageUrl: "/images/pemain/ciro.jpg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 14,
-    nama: "Febri Hariyadi",
-    posisi: "Winger",
+    nama: "Fullname",
+    posisi: "Penyerang Kanan",
     no: 7,
     category: "Penyerang",
-    imageUrl: "/vercel.svg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
+
+  //Pelatih
   {
     id: 14,
-    nama: "Bojan Hodak",
+    nama: "Fullname",
     posisi: "Pelatih Kepala",
     category: "Pelatih",
-    imageUrl: "/vercel.svg",
+    imageUrl: "/images/tim-persib/.jpg",
   },
   {
     id: 15,
-    nama: "Igor",
+    nama: "Fullname",
     posisi: "Asisten Pelatih",
     category: "Pelatih",
-    imageUrl: "/vercel.svg",
+    imageUrl: "/images/tim-persib/.jpg",
+  },
+
+  //Manajer
+  {
+    id: 16,
+    nama: "Fullname",
+    posisi: "",
+    category: "Manajer",
+    imageUrl: "/images/tim-persib/.jpg",
   },
 ];
 
-// --- END: DATA PEMAIN LENGKAP ---
-
 const TimPersibView = () => {
-  const category = ["Kiper", "Bek", "Gelandang", "Penyerang", "Pelatih"];
+  const category = [
+    "Kiper",
+    "Bek",
+    "Gelandang",
+    "Penyerang",
+    "Pelatih",
+    "Manajer",
+  ];
 
   return (
     <>

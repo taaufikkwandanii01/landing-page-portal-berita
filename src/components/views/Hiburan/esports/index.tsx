@@ -1,37 +1,15 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import { CardNews, CardNewsTrending } from "@/components/ui/Card/CardNews";
 
-const news = [
-  {
-    id: 1,
-    href: "/Artikel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
-    category: "Sports Jabar",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/persib/321083001.webp",
-  },
-  {
-    id: 2,
-    href: "/Artikel",
-    title: "Lorem ipsum dolor sit amet.",
-    category: "Sports Jabar",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/persib/321083001.webp",
-  },
-  {
-    id: 3,
-    href: "/Artikel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
-    category: "Sports Jabar",
-    date: "24 November 2025",
-    time: "19:33 WIB",
-    image: "/persib/321083001.webp",
-  },
-];
+const news: {
+  id: number;
+  href: string;
+  title: string;
+  category: string;
+  date: string;
+  time: string;
+  image: string;
+}[] = [];
 
 const trending = [
   {
@@ -45,11 +23,28 @@ const trending = [
     href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
+  {
+    id: 3,
+    href: "/Artikel",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
+  },
+  {
+    id: 4,
+    href: "/Artikel",
+    title:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
+  },
+  {
+    id: 5,
+    href: "/Artikel",
+    title: "Lorem ipsum dolor sit amet.",
+  },
 ];
 
-const SportsJabarView = () => {
+const EsportsView = () => {
   return (
-    <MainLayout category={["Sports Jabar"]}>
+    <MainLayout category={["E-sport & Game"]}>
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
@@ -101,4 +96,4 @@ const SportsJabarView = () => {
   );
 };
 
-export default SportsJabarView;
+export default EsportsView;

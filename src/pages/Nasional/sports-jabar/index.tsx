@@ -1,4 +1,4 @@
-import SportsJabarView from "@/components/views/sportsjabar";
+import SportsJabarView from "@/components/views/Nasional/sportsjabar";
 
 const SportsJabarPage = () => {
   return (

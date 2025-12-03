@@ -3,20 +3,18 @@ import Image from "next/image";
 // Tentukan Tipe Data Pemain
 type PropsType = {
   dataTimPersib: {
-    id: number;
     nama: string;
     posisi: string;
     no?: number;
-    category: string;
     imageUrl: string;
   };
 };
 
 const CardPlayers = ({ dataTimPersib }: PropsType) => {
-  const { id, nama, posisi, no, imageUrl } = dataTimPersib;
+  const { nama, posisi, no, imageUrl } = dataTimPersib;
   return (
     // Gunakan div utama sebagai container card
-    <div className="rounded-b-2xl shadow-lg overflow-hidden bg-slate-800">
+    <div className="rounded-xl shadow-lg overflow-hidden bg-slate-800">
       <div className="relative h-48 sm:h-52 md:h-60 overflow-hidden bg-[#2D5C88]">
         {/* Nomor Punggung Besar di Belakang */}
         <span className="absolute top-0 left-0 text-[8rem] md:text-[6rem] lg:text-[8rem] font-black text-gray-200 opacity-60 leading-none z-0">

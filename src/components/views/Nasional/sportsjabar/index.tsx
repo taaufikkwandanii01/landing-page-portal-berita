@@ -1,5 +1,6 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import { CardNews, CardNewsTrending } from "@/components/ui/Card/CardNews";
+import { useState } from "react";
 
 const news = [
   {
@@ -7,29 +8,29 @@ const news = [
     href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
-    category: "Bola Nasional",
+    category: "Sports Jabar",
     date: "24 November 2025",
     time: "19:33 WIB",
-    image: "/persib/321083001.webp",
+    image: "/",
   },
   {
     id: 2,
     href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
-    category: "Bola Nasional",
+    category: "Sports Jabar",
     date: "24 November 2025",
     time: "19:33 WIB",
-    image: "/persib/321083001.webp",
+    image: "/",
   },
   {
     id: 3,
     href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
-    category: "Bola Nasional",
+    category: "Sports Jabar",
     date: "24 November 2025",
     time: "19:33 WIB",
-    image: "/persib/321083001.webp",
+    image: "/",
   },
 ];
 
@@ -62,28 +63,11 @@ const trending = [
     href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
-  {
-    id: 6,
-    href: "/Artikel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
-  },
-  {
-    id: 7,
-    href: "/Artikel",
-    title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
-  },
-  {
-    id: 8,
-    href: "/Artikel",
-    title: "Lorem ipsum dolor sit amet.",
-  },
 ];
 
-const BolaNasionalView = () => {
+const SportsJabarView = () => {
   return (
-    <MainLayout category={["Bola Nasional"]}>
+    <MainLayout category={["Sports Jabar"]}>
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
@@ -135,4 +119,4 @@ const BolaNasionalView = () => {
   );
 };
 
-export default BolaNasionalView;
+export default SportsJabarView;

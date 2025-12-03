@@ -1,4 +1,3 @@
-import MainLayout from "@/components/layouts/MainLayout";
 import { CardNews, CardNewsTrending } from "@/components/ui/Card/CardNews";
 
 const news = [
@@ -16,7 +15,7 @@ const news = [
     id: 2,
     href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
-    category: "Berita Persib",
+    category: "Bola Nasional",
     date: "24 November 2025",
     time: "19:33 WIB",
     image: "/",
@@ -45,7 +44,7 @@ const news = [
     id: 5,
     href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
-    category: "Berita Persib",
+    category: "Arena Bobotoh",
     date: "24 November 2025",
     time: "19:33 WIB",
     image: "/",
@@ -112,9 +111,9 @@ const trending = [
   },
 ];
 
-const PersibView = () => {
+const MainView = () => {
   return (
-    <MainLayout category={["Berita Persib"]}>
+    <>
       <div className="flex flex-col md:flex-row gap-2">
         {/* Berita Terkini */}
         <div className="w-full md:w-2/3">
@@ -162,8 +161,8 @@ const PersibView = () => {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 
-export default PersibView;
+export default MainView;
