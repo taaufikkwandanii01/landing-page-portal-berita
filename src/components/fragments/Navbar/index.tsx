@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/">
             <Image
-              src="/logo/logo_simamaung.png" // Pastikan path ini benar
+              src="/images/logo/logo_simamaung.png" // Pastikan path ini benar
               alt="Simamaung Logo"
               width={80} // Ukuran sedikit lebih besar
               height={40}
