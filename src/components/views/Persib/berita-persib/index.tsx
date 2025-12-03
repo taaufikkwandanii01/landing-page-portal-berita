@@ -4,7 +4,6 @@ import { CardNews, CardNewsTrending } from "@/components/ui/Card/CardNews";
 const news = [
   {
     id: 1,
-    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
     category: "Berita Persib",
@@ -14,7 +13,6 @@ const news = [
   },
   {
     id: 2,
-    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
     category: "Berita Persib",
     date: "24 November 2025",
@@ -23,7 +21,6 @@ const news = [
   },
   {
     id: 3,
-    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
     category: "Berita Persib",
@@ -33,7 +30,6 @@ const news = [
   },
   {
     id: 4,
-    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
     category: "Berita Persib",
@@ -43,7 +39,6 @@ const news = [
   },
   {
     id: 5,
-    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
     category: "Berita Persib",
     date: "24 November 2025",
@@ -52,7 +47,6 @@ const news = [
   },
   {
     id: 6,
-    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
     category: "Berita Persib",
@@ -62,7 +56,6 @@ const news = [
   },
   {
     id: 7,
-    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
     category: "Berita Persib",
@@ -72,7 +65,6 @@ const news = [
   },
   {
     id: 8,
-    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
     category: "Berita Persib",
     date: "24 November 2025",
@@ -84,33 +76,37 @@ const news = [
 const trending = [
   {
     id: 1,
-    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 2,
-    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
   {
     id: 3,
-    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque.",
   },
   {
     id: 4,
-    href: "/Artikel",
     title:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam vitae perferendis. Aut, aliquid delectus.",
   },
   {
     id: 5,
-    href: "/Artikel",
     title: "Lorem ipsum dolor sit amet.",
   },
 ];
+
+type QueryParams = Record<string, string | number | boolean>;
+
+const generateUrl = (pathname: string, query: QueryParams) => {
+  const queryString = new URLSearchParams(
+    Object.entries(query).map(([key, value]) => [key, String(value)])
+  ).toString();
+  return `${pathname}?${queryString}`;
+};
 
 const PersibView = () => {
   return (
@@ -126,7 +122,13 @@ const PersibView = () => {
             {news.map((item) => (
               <CardNews
                 key={item.id}
-                href={item.href}
+                href={generateUrl(`/Artikel/${item.id}`, {
+                  title: item.title,
+                  date: item.date,
+                  time: item.time,
+                  category: item.category,
+                  image: item.image,
+                })}
                 title={item.title}
                 category={item.category}
                 date={item.date}
@@ -154,7 +156,7 @@ const PersibView = () => {
             {trending.map((item, index) => (
               <CardNewsTrending
                 key={item.id}
-                href={item.href}
+                href="/Artikel"
                 nomor={(index + 1).toString()}
                 title={item.title}
               />
