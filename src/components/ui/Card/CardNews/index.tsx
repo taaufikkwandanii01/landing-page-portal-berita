@@ -43,10 +43,10 @@ const CardNews = (Props: PropsTypeNews) => {
             {title}
           </h2>
           {/* Metadata Kecil */}
-          <div className="text-xs text-gray-400 mt-1">
+          <div className="text-xs text-gray-600 mt-1">
             <span>{category}</span>
           </div>
-          <div className="text-xs text-gray-400 mt-1">
+          <div className="text-xs text-gray-600 mt-1">
             <span>{date}</span>
             <span className="ml-2">{time}</span>
           </div>
